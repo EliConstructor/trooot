@@ -1,0 +1,8 @@
+{
+  "fog_horn_blare": {
+    "subtitle": "sounds.trooot.fog_horn_blare",
+    "sounds": [
+      "trooot:fog_horn_blare"
+    ]
+  }
+}
