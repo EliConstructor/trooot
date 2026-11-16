@@ -38,10 +38,8 @@ public class HornBlock extends Block {
         if (flag != level.hasNeighborSignal(pos)) {
             if (!flag) {
                 playSound(level, pos);
-                level.setBlock(pos, state.cycle(POWERED), 2);
-            } else {
-                level.setBlock(pos, state.cycle(POWERED), 2);
             }
+            level.setBlock(pos, state.cycle(POWERED), 2);
         }
     }
 

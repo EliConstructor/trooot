@@ -1,4 +1,7 @@
 {
   "sounds.trooot.fog_horn_blare": "Fog horn blares",
-  "block.trooot.fog_horn": "Fog Horn"
+  "block.trooot.fog_horn": "Fog Horn",
+  "sounds.trooot.industrial_buzzer": "Industrial buzzer buzzes",
+  "block.trooot.industrial_buzzer": "Industrial Buzzer"
+
 }

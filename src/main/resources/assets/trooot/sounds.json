@@ -4,5 +4,11 @@
     "sounds": [
       "trooot:fog_horn_blare"
     ]
+  },
+  "industrial_buzzer": {
+    "subtitle": "sounds.trooot.industrial_buzzer",
+    "sounds": [
+      "trooot:industrial_buzzer"
+    ]
   }
 }

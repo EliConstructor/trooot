@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "trooot:fog_horn"
+    "trooot:fog_horn",
+    "trooot:industrial_buzzer"
   ]
 }

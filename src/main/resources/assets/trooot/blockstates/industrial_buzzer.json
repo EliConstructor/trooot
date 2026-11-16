@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "trooot:block/industrial_buzzer"
+    },
+    "powered=true": {
+      "model": "trooot:block/industrial_buzzer"
+    }
+  }
+}

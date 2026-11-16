@@ -1,5 +1,6 @@
 package me.eliq.troot;
 
+import me.eliq.troot.block.BuzzerBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import org.slf4j.Logger;
@@ -34,10 +35,18 @@ public class Trooot {
 
     public static final DeferredBlock<HornBlock> FOG_HORN_BLOCK = BLOCKS.registerBlock("fog_horn", HornBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK));
     public static final DeferredItem<BlockItem> FOG_HORN_ITEM = ITEMS.registerSimpleBlockItem("fog_horn", FOG_HORN_BLOCK);
+    public static final DeferredBlock<BuzzerBlock> INDUSTRIAL_BUZZER_BLOCK = BLOCKS.registerBlock("industrial_buzzer", BuzzerBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
+    public static final DeferredItem<BlockItem> INDUSTRIAL_BUZZER_ITEM = ITEMS.registerSimpleBlockItem("industrial_buzzer", INDUSTRIAL_BUZZER_BLOCK);
+
     public static final DeferredHolder<SoundEvent, SoundEvent> FOG_HORN_BLARE_SOUND =
             SOUNDS.register("fog_horn_blare",
                     () -> SoundEvent.createVariableRangeEvent(
                             ResourceLocation.fromNamespaceAndPath(MODID, "fog_horn_blare")));
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> INDUSTRIAL_BUZZER_SOUND =
+            SOUNDS.register("industrial_buzzer",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath(MODID, "industrial_buzzer")));
 
     public Trooot(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
@@ -56,6 +65,7 @@ public class Trooot {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
             event.accept(FOG_HORN_ITEM);
+            event.accept(INDUSTRIAL_BUZZER_ITEM);
         }
     }
 }
